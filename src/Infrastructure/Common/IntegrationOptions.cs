@@ -1,7 +1,7 @@
 ﻿namespace Infrastructure.Common;
 public class IntegrationOptions
 {
-    public string CatsApiDomain { get; set; } = string.Empty;
-    public string CatsApiVersion { get; set; } = string.Empty;
-    public string CatBreedsEndpoint { get; set; } = string.Empty;
+    public string PetStoreApiDomain { get; set; } = string.Empty;
+    public string PetStoreApiVersion { get; set; } = string.Empty;
+    public string PetsByStatusEndpoint { get; set; } = string.Empty;
 }

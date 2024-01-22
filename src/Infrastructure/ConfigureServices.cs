@@ -11,7 +11,7 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services)
         {
-            services.AddHttpClient<ICatApiService, CatApiService>()
+            services.AddHttpClient<IPetStoreApiService, PetStoreApiService>()
                 .SetHandlerLifetime(TimeSpan.FromMinutes(1))
                 .AddPolicyHandler(GetRetryPolicy());
             services.ConfigureOptions<IntegrationOptionsSetup>();
