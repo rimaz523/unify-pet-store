@@ -1,9 +1,7 @@
-﻿using System.Numerics;
-
-namespace Domain.Entities;
-public class Pet
+﻿namespace Domain.Entities;
+public class Pet : BaseEntity
 {
-    public decimal Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string Status { get; set; } = string.Empty;
+    public PetCategory? Category { get; set; }
 }

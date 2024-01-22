@@ -19,6 +19,7 @@ public class GetAvailablePetsQueryHandler : IRequestHandler<GetAvailablePetsQuer
 
     public async Task<List<PetDto>> Handle(GetAvailablePetsQuery request, CancellationToken cancellationToken)
     {
-        return _mapper.Map<List<PetDto>>(await _petStoreApiService.GetPetsByStatus(Constants.Pets.Status.Available));
+        var pets = await _petStoreApiService.GetPetsByStatus(Constants.Pets.Status.Available);
+        return _mapper.Map<List<PetDto>>(pets.OrderBy(x => x.Category?.Name).ThenByDescending(x => x.Name));
     }
 }
