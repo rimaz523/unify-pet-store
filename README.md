@@ -16,10 +16,11 @@ This repository contains the technical test done for the following requirements 
 * If running the web api app, change directory to the WebApi app :  `cd <sln-name>\src\WebApi\` and then execute command `dotnet run`.
 
 ## TODO : 
+* Exception Handling behavior as part of the mediatr pipeline
+* Implement a standard response for web api & console app which should also handle how errors are surfaced
 * Implement code formatting using dotnet format and an editorconfig file. Read more : https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format
 * Improve Unit test coverage
 * Implement end to end tests
-* Implement a standard response for web api which should also handle how errors are surfaced
 * Implement logging for Console App
 * Implement CI/CD pipeline if solution is to be deployed to a web app service in Azure. This includes necessary infrastructure as code for the web app.
 * Improve swagger documentation for the web api
