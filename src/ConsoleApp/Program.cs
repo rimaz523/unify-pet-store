@@ -16,7 +16,7 @@ namespace ConsoleApp
             
             //Wire up IOptions for Console App
             builder.Configuration.Sources.Clear();
-            builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             builder.Configuration.GetSection(nameof(IntegrationOptions)).Bind(new IntegrationOptions());
 
             //Add Application and Infrastrucure layer dependency injection
