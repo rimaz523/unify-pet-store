@@ -15,11 +15,11 @@ public class PetsController : ApiControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<PetDto>>> GetAvailablePets([FromQuery] GetAvailablePetsQuery query)
+    public async Task<ActionResult<List<PetDto>>> GetAvailablePets()
     {
         try
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetAvailablePetsQuery());
         } catch (Exception ex) 
         {
             return BadRequest(ex.Message);
